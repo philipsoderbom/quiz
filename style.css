@@ -4,24 +4,28 @@ html, body{
 	height: 150vh;
 	width: 100vw;
 	background-color: #f2f2f2;
+	overflow-x: hidden;
 }
+
 .wrapper{
 	margin: 20px 0px;
 	width: 100vw;
 }
 .container{
 	margin: 0 auto;
+	margin-bottom: 50px;
 	padding: 0;
-	width: 60vw;
-	height: 80vh;
+	width: 40vw;
+	height: 2000px;
 	background-color: #8094b5;
 	border-radius: 20px;
 	box-shadow: 0px 9px 11px 0px #acadaf;
 }
 .container img{
 	inline-size: 10rem;
-	position: absolute;
-	left: 25%;
+}
+#gissa_loggan, #gissa_loggan_2{
+	visibility: hidden;
 }
 h1{
 	padding: 30px 0px;
@@ -31,27 +35,194 @@ h2{
 	color: #fff;
 }
 .form-control{
-	width: 50vw;
-}
-.input-col{
-	padding-top: 250px;
+	border-radius: 20px;
+	border: none;
+	visibility: hidden;
 }
 input{
 	padding-right: 200px;
 }
+
 p#antalratt{
 	font-weight: 700;
+	visibility: hidden;
 }
-.row{
-	margin: 20px 10px;
-
+p#tip{
+	font-size: 12px;
 }
-button{
-	border: 2px solid aliceblue;
-	background-color: #8094b5;
+#trean{
+	visibility: hidden;
+}
+.lbl-1{
+	margin: 40px 0px;
+}
+#startaQuiz{
 	color: #fff;
 	border-radius: 20px;
-	position: absolute;
-	top: 3px;
-	left: 50px; 
+	background-color: #1ebba3;
+	border: 2px solid #fff;
+	padding: 5px 8px;
+	margin: 20px 0px;
+	cursor: pointer;
+	outline: none;
+}
+#startaQuiz:hover{
+	background: #25edcf;
+	color: #111;
+	border: 2px solid #111;
+	transition: .4s;
+
+}
+#klar-knapp{
+	color: #fff;
+	border-radius: 20px;
+	background-color: #1ebba3;
+	border: 2px solid #fff;
+	padding: 5px 8px;
+	cursor: pointer;
+	outline: none;
+	visibility: hidden;
+}
+#klar-knapp:hover{
+	background: #25edcf;
+	color: #111;
+	border: 2px solid #111;
+	transition: .4s;
+
+}
+#nästa-knapp, #nästa-knapp_2{
+	color: #fff;
+	border-radius: 20px;
+	background-color: #1ebba3;
+	border: 2px solid #fff;
+	padding: 5px 8px;
+	cursor: pointer;
+	outline: none;
+	visibility: hidden;
+}
+#nästa-knapp:hover, #nästa-knapp_2:hover{
+	background: #25edcf;
+	color: #111;
+	border: 2px solid #111;
+	transition: .4s;
+
+}
+
+
+
+.grid{
+	display: grid;
+	grid-template-rows: 1fr 1fr 250px 1fr 1fr;
+	grid-template-columns: 1fr 2.4fr 1fr;
+	grid-template-areas:
+	". startknapp ."
+	". heading ."
+	". logo ."
+	". input ."
+	". nästa-knapp ."
+	;
+}
+.heading{
+	grid-area: heading;
+	justify-self: center;
+	visibility: hidden;
+}
+.logo{
+	grid-area: logo;
+	justify-self: center;
+}
+.startknapp{
+	grid-area: startknapp;
+	justify-self: center;
+}
+.input{
+	grid-area: input;
+	justify-self: center;
+}
+.räknare{
+	grid-area: räknare;
+	justify-self: center;
+}
+.klar-knapp{
+	grid-area: klar-knapp;
+	justify-self: center;
+}
+.nästa-knapp{
+	grid-area: nästa-knapp;
+	justify-self: center;
+}
+
+
+.grid-2{
+	display: grid;
+	grid-template-rows: 250px 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+	"logo_tva"
+	"input"
+	"nästa-knapp"
+	;
+}
+.logo-2{
+	grid-area: logo_tva;
+	justify-self: center;
+}
+.input-2{
+	grid-area: input_tva;
+	justify-self: center;
+}
+
+.grid-3{
+	display: grid;
+	grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+	grid-template-columns: 1.5fr 5fr 1.5fr;
+	grid-template-areas:
+	". label_ett ."
+	"input_ett input_tva input_tre"
+	". label_tva ."
+	"input_fyra input_fem input_sex"
+	;
+}
+.lbl-1{
+	grid-area: label_ett;
+	justify-self: center;
+}
+.lbl-2{
+	grid-area: label_tva;
+	justify-self: center;
+}
+.input-1{
+	grid-area: input_ett;
+	justify-self: center;
+}
+.input-2{
+	grid-area: input_tva;
+	justify-self: center;
+}
+.input-3{
+	grid-area: input_tre;
+	justify-self: center;
+}
+.input-4{
+	grid-area: input_fyra;
+	justify-self: center;
+}
+.input-5{
+	grid-area: input_fem;
+	justify-self: center;
+}
+.input-6{
+	grid-area: input_sex;
+	justify-self: center;
+}
+
+
+
+
+@media (max-width: 400px){
+	.container{
+	width: 90vw;
+}
+.container img{
+	inline-size: 10rem;
 }

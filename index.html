@@ -15,33 +15,91 @@
   <title>Miniprojekt - Quiz</title>
 </head>
 <body>
-  <div class="wrapper">
-    <h1 class="text-center">Quiz</h1>
-    <div class="container">
-      <h2 class="text-center">Skriv in klubblaget...</h2>
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"><img src="img/real.png"></div>
-        <div class="col-md-4"></div>
-      </div>
 
-      <div class="row input-col">
-        <div class="col-md-12">
-          <input id="test" type="text" class="form-control" placeholder="Ange ditt svar">
+  <h1 class="text-center">Quiz</h1>
+  <div class="container" id="container">
+
+    <section class="grid">
+      <div class="heading" id="heading">
+        <h2>Skriv in klubblaget...</h2>
+      </div>
+      <div class="logo">
+        <img id="gissa_loggan" src="img/real.png">
+      </div>
+      <div class="startknapp">
+        <button id="startaQuiz">Starta quizet!</button>
+      </div>
+      <div class="input">
+        <form name="quiz" method="get">
+          <input id="svarsRuta" type="text" class="form-control" name="fraga1" placeholder="">
           <p id="tip"></p>
-        </div>
+        </form>
+      </div>
+      <div class="nästa-knapp">
+        <a href="#tvåan"><button id="nästa-knapp">Nästa fråga</button></a>
+      </div>
+    </section>
+
+
+    <section class="grid-2" id="tvåan">
+      <div class="logo-2" >
+        <img id="gissa_loggan_2" src="img/manutd.png">
+      </div>
+      <div class="input">
+        <form class="input-2" name="quiz" method="get">
+          <input id="svarsRuta_2" type="text" class="form-control" name="fraga2" placeholder="">
+          <p id="tip"></p>
+        </form>
+      </div>
+      <div class="nästa-knapp">
+        <a href="#trean"><button id="nästa-knapp_2">Nästa sektion</button></a>
+      </div>
+    </section>
+
+
+    <section class="grid-3" id="trean">
+      <label class="lbl-1" for="inlineCheckbox1"><b>Vilken fotbollsklubb har vunnit flest antal Europacuper? (13)</b></label>
+      <div class="input-1">
+        <input type="checkbox" id="inlineCheckbox1" value="">
+        <label>R.Madrid</label>
       </div>
 
-      <div class="row text-center">
-        <div class="col-md-12"><p id="antalratt">Antal rätt: </p></div>
+      <div class="input-2">
+        <input type="checkbox" id="inlineCheckbox2" value="option1">
+        <label>Juventus</label>
       </div>
+
+      <div class="input-3">
+        <input type="checkbox" id="inlineCheckbox3" value="option1">
+        <label>Barcelona</label>
+      </div>
+
+      <label class="lbl-2" for="inlineCheckbox1"><b>Hur många utespelare är på planen samtidigt?</b></label>
+      <div class="input-4">
+        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <label>11</label>
+      </div>
+
+      <div class="input-5">
+        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <label>20</label>
+      </div>
+
+      <div class="input-6">
+        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <label>22</label>
+      </div>
+    </section>
+
+  
+
+
     </div>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+  </html>
