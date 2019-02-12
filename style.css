@@ -16,7 +16,7 @@ html, body{
 	margin-bottom: 50px;
 	padding: 0;
 	width: 40vw;
-	height: 2000px;
+	height: 100px;
 	background-color: #8094b5;
 	border-radius: 20px;
 	box-shadow: 0px 9px 11px 0px #acadaf;
@@ -42,10 +42,14 @@ h2{
 input{
 	padding-right: 200px;
 }
+.bullet-point{
+	width: 15px;
+	height: 15px;
+	border-radius: 20px;
+}
 
 p#antalratt{
 	font-weight: 700;
-	visibility: hidden;
 }
 p#tip{
 	font-size: 12px;
@@ -69,7 +73,6 @@ p#tip{
 #startaQuiz:hover{
 	background: #25edcf;
 	color: #111;
-	border: 2px solid #111;
 	transition: .4s;
 
 }
@@ -81,7 +84,7 @@ p#tip{
 	padding: 5px 8px;
 	cursor: pointer;
 	outline: none;
-	visibility: hidden;
+	
 }
 #klar-knapp:hover{
 	background: #25edcf;
@@ -173,14 +176,19 @@ p#tip{
 }
 
 .grid-3{
+	margin: 0px 15px;
 	display: grid;
-	grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr;
+	grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
 	grid-template-columns: 1.5fr 5fr 1.5fr;
 	grid-template-areas:
 	". label_ett ."
 	"input_ett input_tva input_tre"
 	". label_tva ."
 	"input_fyra input_fem input_sex"
+	". label_tre ."
+	"input_sju input_atta input_nio"
+	". label_fyra ."
+	"input_tio input_elva input_tolv"
 	;
 }
 .lbl-1{
@@ -189,6 +197,14 @@ p#tip{
 }
 .lbl-2{
 	grid-area: label_tva;
+	justify-self: center;
+}
+.lbl-3{
+	grid-area: label_tre;
+	justify-self: center;
+}
+.lbl-4{
+	grid-area: label_fyra;
 	justify-self: center;
 }
 .input-1{
@@ -215,11 +231,35 @@ p#tip{
 	grid-area: input_sex;
 	justify-self: center;
 }
+.input-7{
+	grid-area: input_sju;
+	justify-self: center;
+}
+.input-8{
+	grid-area: input_atta;
+	justify-self: center;
+}
+.input-9{
+	grid-area: input_nio;
+	justify-self: center;
+}
+.input-10{
+	grid-area: input_tio;
+	justify-self: center;
+}
+.input-11{
+	grid-area: input_elva;
+	justify-self: center;
+}
+.input-12{
+	grid-area: input_tolv;
+	justify-self: center;
+}
 
 
 
 
-@media (max-width: 400px){
+@media (max-width: 400px){    /*---iPhone X ---*/
 	.container{
 	width: 90vw;
 }

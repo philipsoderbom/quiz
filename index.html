@@ -14,7 +14,7 @@
 
   <title>Miniprojekt - Quiz</title>
 </head>
-<body>
+<body id="onScroll">
 
   <h1 class="text-center">Quiz</h1>
   <div class="container" id="container">
@@ -31,7 +31,7 @@
       </div>
       <div class="input">
         <form name="quiz" method="get">
-          <input id="svarsRuta" type="text" class="form-control" name="fraga1" placeholder="">
+          <input id="svarsRuta" type="text" class="form-control" name="real madrid" placeholder="">
           <p id="tip"></p>
         </form>
       </div>
@@ -47,7 +47,7 @@
       </div>
       <div class="input">
         <form class="input-2" name="quiz" method="get">
-          <input id="svarsRuta_2" type="text" class="form-control" name="fraga2" placeholder="">
+          <input id="svarsRuta_2" type="text" class="form-control" name="manchester united" placeholder="">
           <p id="tip"></p>
         </form>
       </div>
@@ -58,41 +58,75 @@
 
 
     <section class="grid-3" id="trean">
-      <label class="lbl-1" for="inlineCheckbox1"><b>Vilken fotbollsklubb har vunnit flest antal Europacuper? (13)</b></label>
+    
+      <label class="lbl-1"><b>Vilken fotbollsklubb har vunnit flest antal Europacuper? (13st)</b></label>
       <div class="input-1">
-        <input type="checkbox" id="inlineCheckbox1" value="">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox1" value="R.Madrid">
         <label>R.Madrid</label>
       </div>
 
       <div class="input-2">
-        <input type="checkbox" id="inlineCheckbox2" value="option1">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox2" value="">
         <label>Juventus</label>
       </div>
 
       <div class="input-3">
-        <input type="checkbox" id="inlineCheckbox3" value="option1">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox3" value="">
         <label>Barcelona</label>
       </div>
 
       <label class="lbl-2" for="inlineCheckbox1"><b>Hur många utespelare är på planen samtidigt?</b></label>
       <div class="input-4">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox4" value="option4">
         <label>11</label>
       </div>
 
       <div class="input-5">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox5" value="spelare20">
         <label>20</label>
       </div>
 
       <div class="input-6">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox6" value="option6">
         <label>22</label>
       </div>
+
+      <label class="lbl-3" for="inlineCheckbox1"><b>I vilken stad spelades den senaste Champions League-finalen?</b></label>
+      <div class="input-7">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox7" value="option7">
+        <label>London</label>
+      </div>
+
+      <div class="input-8">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox8" value="option8">
+        <label>Paris</label>
+      </div>
+
+      <div class="input-9">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox9" value="kiev">
+        <label>Kiev</label>
+      </div>
+
+      <label class="lbl-4" for="inlineCheckbox1"><b>När vann Liverpool Champions League senast?</b></label>
+      <div class="input-10">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox10" value="option10">
+        <label>1976</label>
+      </div>
+
+      <div class="input-11">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox11" value="ar2005">
+        <label>2005</label>
+      </div>
+
+      <div class="input-12">
+        <input class="bullet-point" type="checkbox" id="inlineCheckbox12" value="option12">
+        <label>2012</label>
+      </div>
     </section>
-
-  
-
+    <section class="slut">
+    <button id="klar-knapp">Tryck för rättning</button>
+    <div><p id="antalratt"></p></div>
+    </section>
 
     </div>
     <!-- Optional JavaScript -->

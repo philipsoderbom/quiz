@@ -39,6 +39,7 @@ starta.addEventListener('click', () => {
 	/*klarKnapp.style.visibility = 'visible';*/
 	nästaKnapp.style.visibility = 'visible';
 	heading.style.visibility = 'visible';
+	document.getElementById('container').style.height = '2000px'
 	svarsRuta.focus();
 	starta.remove();
 	typeWriter();
@@ -48,7 +49,6 @@ nästaKnapp.addEventListener('click', () => {
 	document.getElementById('gissa_loggan_2').style.visibility = 'visible';
 	document.getElementById('svarsRuta_2').style.visibility = 'visible';
 	document.getElementById('nästa-knapp_2').style.visibility = 'visible';
-})
 
 const nästaKnapp2 = document.getElementById('nästa-knapp_2');
 nästaKnapp2.addEventListener('click', () => {
@@ -56,38 +56,54 @@ nästaKnapp2.addEventListener('click', () => {
 })
 
 
+/*Rättning*/
+var Svar = ["real madrid", "manchester united", "R.Madrid", "spelare20", "kiev", "ar2005"];
+var j = 0;
+var antalratt = 0;
 
-
-
-
-
-
-
-
-
-function rätta(){
-
-	 var fraga1 = document.quiz.fraga1.value;
-	 var fraga2 = document.quiz.fraga2.value;
-	 var antalratt = 0;
-
-	 if (fraga1 == "real madrid"){
-	 	antalratt++;
-	 }
+const ratta = document.getElementById('klar-knapp');
+ratta.addEventListener('click', function(){
 	
-	 
-	 if (fraga2 == "manchester united") {
-	 	antalratt++
-	 }
+		var realmadrid = document.getElementById('svarsRuta').name;
+		if (Svar[0] == realmadrid) {
+			antalratt++;
+			j++;
+		}
+		var manutd = document.getElementById('svarsRuta_2').name;
+		if (Svar[1] == manutd) {
+			antalratt++;
+			j++;
+			
+		};
 
 
-document.getElementById('antalratt').innerHTML = "Du fick " + antalratt + " rätt av 5 möjliga!"
-}
+		var RMadrid = document.getElementById('inlineCheckbox1').value;
+		if (Svar[2] == RMadrid ) {
+			antalratt++;
+			j++;
+		};
+
+		var spelare20 = document.getElementById('inlineCheckbox5').value;
+		if (Svar[3] == spelare20 ) {
+			antalratt++;
+			j++;
+		};
+
+		var kiev = document.getElementById('inlineCheckbox9').value;
+		if (Svar[4] == kiev ) {
+			antalratt++;
+			j++;
+		};
+
+		var ar2005 = document.getElementById('inlineCheckbox11').value;
+		if (Svar[5] == ar2005 ) {
+			antalratt++;
+			j++;
+		};
 
 
+	document.getElementById('antalratt').innerHTML = "Du fick " + antalratt + " rätt av 6 möjliga!";
 
 
-
-
-
-
+});
+});
