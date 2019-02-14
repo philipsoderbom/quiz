@@ -1,109 +1,66 @@
 
 
+var score = 0;
+
+document.getElementById('correctFraga1').addEventListener('click', function(){      /*fråga 1*/
+	score++;
+	/*document.getElementById('resultat').innerHTML = "Resultat: "+score+"/10";*/
+	console.log(score);
+})
+document.getElementById('correctFraga2').addEventListener('click', function(){    /*fråga 2*/
+	score++;
+	console.log(score);
+})
+document.getElementById('correctFraga3').addEventListener('click', function(){        /*fråga 3 */
+	score++;
+	console.log(score);
+})
+document.getElementById('correctFraga4').addEventListener('click', function(){       /* fråga 4*/
+	score++;
+	console.log(score);
+})
+document.getElementById('correctFraga5').addEventListener('click', function(){         
+	score++;
+	console.log(score);
+})
+
+document.getElementById('correctFraga6').addEventListener('click', function(){      
+	score++;
+	console.log(score);
+})
+
+document.getElementById('correctFraga7').addEventListener('click', function(){      
+	score++;
+	console.log(score);
+})
+
+document.getElementById('correctFraga8').addEventListener('click', function(){         
+	score++;
+	console.log(score);
+})
+
+document.getElementById('correctFraga9').addEventListener('click', function(){       
+	score++;
+	console.log(score);
+})
+document.getElementById('correctFraga10').addEventListener('click', function(){      
+	score++;
+	console.log(score);
+})
 
 
-/*$(document).ready(function(){
-	var array = ["real madrid", "manchester united", "borussia dortmund", "juventus"];
-	var aktuellfraga = 0;
-	$("form").on('submit', function(){
-		return false;
-		
+
+
+$(document).ready(function(){
+	$('#BackToTop').click(function(){
+		$('.fadeOut').fadeOut(1800);
+		$('.resultat').css("visibility", "visible");
 	})
-})*/
-
-
-var i = 0;
-message = 'Ange ditt svar . . .';
-speed = 150;
-
-function typeWriter() {
-	if (i < message.length) {
-		msg = svarsRuta.getAttribute('placeholder') + message.charAt(i);
-		svarsRuta.setAttribute('placeholder', msg);
-		i++;
-		setTimeout(typeWriter, speed);
-
-	}
-}
-
-
-const nästaKnapp = document.getElementById('nästa-knapp');
-const svarsRuta = document.getElementById('svarsRuta');
-const starta = document.getElementById('startaQuiz');
-const heading = document.getElementById('heading');
-
-starta.addEventListener('click', () => {
-	document.getElementById('tip').innerHTML = "OBS skriv svaret med <b>gemener</b>";
-	document.getElementById('gissa_loggan').style.visibility = 'visible';
-	svarsRuta.style.visibility = 'visible';
-	/*klarKnapp.style.visibility = 'visible';*/
-	nästaKnapp.style.visibility = 'visible';
-	heading.style.visibility = 'visible';
-	document.getElementById('container').style.height = '2000px'
-	svarsRuta.focus();
-	starta.remove();
-	typeWriter();
-})
-
-nästaKnapp.addEventListener('click', () => {
-	document.getElementById('gissa_loggan_2').style.visibility = 'visible';
-	document.getElementById('svarsRuta_2').style.visibility = 'visible';
-	document.getElementById('nästa-knapp_2').style.visibility = 'visible';
-
-const nästaKnapp2 = document.getElementById('nästa-knapp_2');
-nästaKnapp2.addEventListener('click', () => {
-	document.getElementById('trean').style.visibility = 'visible';
 })
 
 
-/*Rättning*/
-var Svar = ["real madrid", "manchester united", "R.Madrid", "spelare20", "kiev", "ar2005"];
-var j = 0;
-var antalratt = 0;
-
-const ratta = document.getElementById('klar-knapp');
-ratta.addEventListener('click', function(){
-	
-		var realmadrid = document.getElementById('svarsRuta').name;
-		if (Svar[0] == realmadrid) {
-			antalratt++;
-			j++;
-		}
-		var manutd = document.getElementById('svarsRuta_2').name;
-		if (Svar[1] == manutd) {
-			antalratt++;
-			j++;
-			
-		};
-
-
-		var RMadrid = document.getElementById('inlineCheckbox1').value;
-		if (Svar[2] == RMadrid ) {
-			antalratt++;
-			j++;
-		};
-
-		var spelare20 = document.getElementById('inlineCheckbox5').value;
-		if (Svar[3] == spelare20 ) {
-			antalratt++;
-			j++;
-		};
-
-		var kiev = document.getElementById('inlineCheckbox9').value;
-		if (Svar[4] == kiev ) {
-			antalratt++;
-			j++;
-		};
-
-		var ar2005 = document.getElementById('inlineCheckbox11').value;
-		if (Svar[5] == ar2005 ) {
-			antalratt++;
-			j++;
-		};
-
-
-	document.getElementById('antalratt').innerHTML = "Du fick " + antalratt + " rätt av 6 möjliga!";
-
-
-});
-});
+const correct = document.getElementById('correct');
+const antalRatt = document.getElementById('antalRatt');
+correct.addEventListener('click', function(){
+	antalRatt.innerHTML = "Du fick "+score+" rätt av 10 möjliga!";
+})

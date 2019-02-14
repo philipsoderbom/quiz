@@ -1,268 +1,364 @@
 html, body{
 	font-family: 'Montserrat';
 	margin: 0;
-	height: 150vh;
-	width: 100vw;
-	background-color: #f2f2f2;
-	overflow-x: hidden;
-}
-
-.wrapper{
-	margin: 20px 0px;
-	width: 100vw;
-}
-.container{
-	margin: 0 auto;
-	margin-bottom: 50px;
-	padding: 0;
-	width: 40vw;
-	height: 100px;
-	background-color: #8094b5;
-	border-radius: 20px;
-	box-shadow: 0px 9px 11px 0px #acadaf;
-}
-.container img{
-	inline-size: 10rem;
-}
-#gissa_loggan, #gissa_loggan_2{
-	visibility: hidden;
 }
 h1{
-	padding: 30px 0px;
-}
-h2{
-	padding: 10px 0px;
-	color: #fff;
-}
-.form-control{
-	border-radius: 20px;
-	border: none;
-	visibility: hidden;
-}
-input{
-	padding-right: 200px;
-}
-.bullet-point{
-	width: 15px;
-	height: 15px;
-	border-radius: 20px;
-}
-
-p#antalratt{
-	font-weight: 700;
-}
-p#tip{
-	font-size: 12px;
-}
-#trean{
-	visibility: hidden;
-}
-.lbl-1{
-	margin: 40px 0px;
-}
-#startaQuiz{
-	color: #fff;
-	border-radius: 20px;
-	background-color: #1ebba3;
-	border: 2px solid #fff;
-	padding: 5px 8px;
+	text-align: center;
+	font-size: 50px;
 	margin: 20px 0px;
-	cursor: pointer;
+}
+p#fraga{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+}
+p#antalRatt{
+	text-align: center;
+	font-weight: 700;
+	font-size: 37px;
+	margin-top: 30px;
+}
+.container{
+	height: 80vh;
+	width: 1000px;
+	background-color: #f2f2f2;
+	border-radius: 24px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+#gissa{
+	text-align: center;
+}
+#gissa img{
+	inline-size: 27rem;
+	border-radius: 24px;
+	margin: 0 auto;
+	display: inline-block;
+}
+#svarsKnappar button{
 	outline: none;
-}
-#startaQuiz:hover{
-	background: #25edcf;
-	color: #111;
-	transition: .4s;
-
-}
-#klar-knapp{
-	color: #fff;
-	border-radius: 20px;
+	border: none;
+	border-radius: 12px;
 	background-color: #1ebba3;
-	border: 2px solid #fff;
-	padding: 5px 8px;
-	cursor: pointer;
-	outline: none;
-	
-}
-#klar-knapp:hover{
-	background: #25edcf;
-	color: #111;
-	border: 2px solid #111;
-	transition: .4s;
-
-}
-#nästa-knapp, #nästa-knapp_2{
 	color: #fff;
-	border-radius: 20px;
-	background-color: #1ebba3;
-	border: 2px solid #fff;
-	padding: 5px 8px;
+	padding: 12px 10px;
 	cursor: pointer;
+	width: 250px;
+	height: 60px;
+	margin: 20px 0px;
+	transition: .5s;
+}
+#svarsKnappar button:hover{
+	background-color: #11695c;
+	transition: .5s;
+}
+#BackToTop{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	background-color: #1ebba3;
+	color: #fff;
+	inline-size: 5rem;
+	position: relative;
+	bottom: -50px;
+	left: 740px;
 	outline: none;
+	cursor: pointer;
+}
+#correct{
+	background-color: #1ebba3;
+	outline: none;
+	border: 2px solid #1ebba3;
+	border-radius: 12px;
+	color: #fff;
+	padding: 6px;
+	cursor: pointer;
+	transition: .6s;
+	position: relative;
+	left: 445px;
+	margin-top: 120px;
+}
+#correct:hover{
+	background-color: #11695c;
+	color: #fff;
+	transition: .6s;
+	border: 2px solid #fff;
+}
+.resultat{
 	visibility: hidden;
 }
-#nästa-knapp:hover, #nästa-knapp_2:hover{
-	background: #25edcf;
-	color: #111;
-	border: 2px solid #111;
-	transition: .4s;
-
-}
-
-
-
+/*Grid*/
 .grid{
 	display: grid;
-	grid-template-rows: 1fr 1fr 250px 1fr 1fr;
-	grid-template-columns: 1fr 2.4fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-	". startknapp ."
-	". heading ."
-	". logo ."
-	". input ."
-	". nästa-knapp ."
+	"btn_ett btn_tva"
+	"btn_tre btn_fyra"
 	;
 }
-.heading{
-	grid-area: heading;
-	justify-self: center;
-	visibility: hidden;
-}
-.logo{
-	grid-area: logo;
+#btn1{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.startknapp{
-	grid-area: startknapp;
+#btn2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-.input{
-	grid-area: input;
+#btn3{
+	grid-area: btn_tre;
 	justify-self: center;
 }
-.räknare{
-	grid-area: räknare;
+#correctFraga1{
+	grid-area: btn_fyra;
 	justify-self: center;
 }
-.klar-knapp{
-	grid-area: klar-knapp;
-	justify-self: center;
-}
-.nästa-knapp{
-	grid-area: nästa-knapp;
-	justify-self: center;
-}
-
 
 .grid-2{
 	display: grid;
-	grid-template-rows: 250px 1fr 1fr;
-	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-	"logo_tva"
-	"input"
-	"nästa-knapp"
+	"btn_ett btn_tva"
+	"btn_tre btn_fyra"
 	;
 }
-.logo-2{
-	grid-area: logo_tva;
+#btn1{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.input-2{
-	grid-area: input_tva;
+#correctFraga2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-
+#btn3{
+	grid-area: btn_tre;
+	justify-self: center;
+}
+#btn4{
+	grid-area: btn_fyra;
+	justify-self: center;
+}
 .grid-3{
-	margin: 0px 15px;
 	display: grid;
-	grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
-	grid-template-columns: 1.5fr 5fr 1.5fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
-	". label_ett ."
-	"input_ett input_tva input_tre"
-	". label_tva ."
-	"input_fyra input_fem input_sex"
-	". label_tre ."
-	"input_sju input_atta input_nio"
-	". label_fyra ."
-	"input_tio input_elva input_tolv"
+	"btn_ett btn_tva"
+	"btn_tre btn_fyra"
 	;
 }
-.lbl-1{
-	grid-area: label_ett;
+#btn1{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.lbl-2{
-	grid-area: label_tva;
+#btn2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-.lbl-3{
-	grid-area: label_tre;
+#correctFraga3{
+	grid-area: btn_tre;
 	justify-self: center;
 }
-.lbl-4{
-	grid-area: label_fyra;
+#btn4{
+	grid-area: btn_fyra;
 	justify-self: center;
 }
-.input-1{
-	grid-area: input_ett;
+
+.grid-4{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva"
+	;
+}
+#correctFraga4{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.input-2{
-	grid-area: input_tva;
+#btn2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-.input-3{
-	grid-area: input_tre;
+
+.grid-5{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#btn1{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.input-4{
-	grid-area: input_fyra;
+#btn2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-.input-5{
-	grid-area: input_fem;
+#btn3{
+	grid-area: btn_tre;
 	justify-self: center;
 }
-.input-6{
-	grid-area: input_sex;
+#correctFraga5{
+	grid-area: btn_fyra;
 	justify-self: center;
 }
-.input-7{
-	grid-area: input_sju;
+
+.grid-6{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#correctFraga6{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.input-8{
-	grid-area: input_atta;
+#btn2{
+	grid-area: btn_tva;
 	justify-self: center;
 }
-.input-9{
-	grid-area: input_nio;
+#btn3{
+	grid-area: btn_tre;
 	justify-self: center;
 }
-.input-10{
-	grid-area: input_tio;
+#btn4{
+	grid-area: btn_fyra;
 	justify-self: center;
 }
-.input-11{
-	grid-area: input_elva;
+
+.grid-7{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#correctFraga7{
+	grid-area: btn_ett;
 	justify-self: center;
 }
-.input-12{
-	grid-area: input_tolv;
+#btn2{
+	grid-area: btn_tva;
+	justify-self: center;
+}
+#btn3{
+	grid-area: btn_tre;
+	justify-self: center;
+}
+#btn4{
+	grid-area: btn_fyra;
+	justify-self: center;
+}
+
+.grid-8{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#btn1{
+	grid-area: btn_ett;
+	justify-self: center;
+}
+#btn2{
+	grid-area: btn_tva;
+	justify-self: center;
+}
+#btn3{
+	grid-area: btn_tre;
+	justify-self: center;
+}
+#correctFraga8{
+	grid-area: btn_fyra;
+	justify-self: center;
+}
+
+.grid-9{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#btn1{
+	grid-area: btn_ett;
+	justify-self: center;
+}
+#correctFraga9{
+	grid-area: btn_tva;
+	justify-self: center;
+}
+#btn3{
+	grid-area: btn_tre;
+	justify-self: center;
+}
+#btn4{
+	grid-area: btn_fyra;
+	justify-self: center;
+}
+
+.grid-10{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"btn_ett btn_tva btn_tre btn_fyra"
+	;
+}
+#btn1{
+	grid-area: btn_ett;
+	justify-self: center;
+}
+#btn2{
+	grid-area: btn_tva;
+	justify-self: center;
+}
+#correctFraga10{
+	grid-area: btn_tre;
+	justify-self: center;
+}
+#btn4{
+	grid-area: btn_fyra;
 	justify-self: center;
 }
 
 
 
 
-@media (max-width: 400px){    /*---iPhone X ---*/
-	.container{
-	width: 90vw;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+	background-color: #336699;
+	height: 20vh;
 }
-.container img{
-	inline-size: 10rem;
-}
+
+
+

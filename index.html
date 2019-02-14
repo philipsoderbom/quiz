@@ -1,139 +1,150 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600i,700');
-  </style>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600i,700');</style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <title>Miniprojekt - Quiz</title>
+  <title>Quiz</title>
 </head>
-<body id="onScroll">
-
-  <h1 class="text-center">Quiz</h1>
-  <div class="container" id="container">
-
-    <section class="grid">
-      <div class="heading" id="heading">
-        <h2>Skriv in klubblaget...</h2>
-      </div>
-      <div class="logo">
-        <img id="gissa_loggan" src="img/real.png">
-      </div>
-      <div class="startknapp">
-        <button id="startaQuiz">Starta quizet!</button>
-      </div>
-      <div class="input">
-        <form name="quiz" method="get">
-          <input id="svarsRuta" type="text" class="form-control" name="real madrid" placeholder="">
-          <p id="tip"></p>
-        </form>
-      </div>
-      <div class="nästa-knapp">
-        <a href="#tvåan"><button id="nästa-knapp">Nästa fråga</button></a>
-      </div>
-    </section>
+<body id="body">
+<h1 id="hem">Quiz</h1>
+<div class="container">
+  <div class="fadeOut">
+  <p id="fraga">Vem är detta?</p>
+  <div id="gissa"><img src="img/vem.jpg"></div>
 
 
-    <section class="grid-2" id="tvåan">
-      <div class="logo-2" >
-        <img id="gissa_loggan_2" src="img/manutd.png">
-      </div>
-      <div class="input">
-        <form class="input-2" name="quiz" method="get">
-          <input id="svarsRuta_2" type="text" class="form-control" name="manchester united" placeholder="">
-          <p id="tip"></p>
-        </form>
-      </div>
-      <div class="nästa-knapp">
-        <a href="#trean"><button id="nästa-knapp_2">Nästa sektion</button></a>
-      </div>
-    </section>
+<div id="svarsKnappar">
+  <div class="grid">
+    <button id="btn1">Cristiano Ronaldo</button>
+    <button id="btn2">Zinedine Zidane</button>
+    <button id="btn3">Neymar</button>
+    <button id="correctFraga1">Vinicius Jr</button>
+  </div>
+</div>
+</div>
+
+<div class="resultat" id="resultat">
+  <button id="correct">Rätta Quiz!</button>
+  <p id="antalRatt"></p>
+</div>
+
+</div>
+
+<div class="container">
+  <p id="fraga">Vem vann utmärkelsen Ballon D'or år 2018?</p>
+<div id="svarsKnappar">
+  <div class="grid-2">
+    <button id="btn1">Cristiano Ronaldo</button>
+    <button id="correctFraga2">Modric</button>
+    <button id="btn3">Neymar</button>
+    <button id="btn4">Messi</button>
+  </div>
+</div>
+
+<p id="fraga">Vilken klubbb har vunnit flest Europacuper?</p>
+<div id="svarsKnappar">
+  <div class="grid-3">
+    <button id="btn1">Juventus</button>
+    <button id="btn2">Barcelona</button>
+    <button id="correctFraga3">Real Madrid</button>
+    <button id="btn4">Manchester City</button>
+  </div>
+</div>
+
+<p id="fraga">Hur många?</p>
+<div id="svarsKnappar">
+  <div class="grid-4">
+    <button id="correctFraga4">13</button>
+    <button id="btn2">8</button>
+  </div>
+</div>
+</div>
 
 
-    <section class="grid-3" id="trean">
-    
-      <label class="lbl-1"><b>Vilken fotbollsklubb har vunnit flest antal Europacuper? (13st)</b></label>
-      <div class="input-1">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox1" value="R.Madrid">
-        <label>R.Madrid</label>
-      </div>
 
-      <div class="input-2">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox2" value="">
-        <label>Juventus</label>
-      </div>
+<section id="carQuiz"></section>
 
-      <div class="input-3">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox3" value="">
-        <label>Barcelona</label>
-      </div>
+<p id="fraga">Vilken av biltillverkarna är italiensk?</p>
+<div id="svarsKnappar">
+  <div class="grid-5">
+    <button id="btn1">Hyundai</button>
+    <button id="btn2">Volvo</button>
+    <button id="btn3">BMW</button>
+    <button id="correctFraga5">Alfa Romeo</button>
+  </div>
+</div>
 
-      <label class="lbl-2" for="inlineCheckbox1"><b>Hur många utespelare är på planen samtidigt?</b></label>
-      <div class="input-4">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox4" value="option4">
-        <label>11</label>
-      </div>
+<p id="fraga">Vilken av biltillverkarna är svensk?</p>
+<div id="svarsKnappar">
+  <div class="grid-6">
+    <button id="correctFraga6">Volvo</button>
+    <button id="btn2">Ford</button>
+    <button id="btn3">Chevrolet</button>
+    <button id="btn4">Maserati</button>
+  </div>
+</div>
 
-      <div class="input-5">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox5" value="spelare20">
-        <label>20</label>
-      </div>
 
-      <div class="input-6">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox6" value="option6">
-        <label>22</label>
-      </div>
 
-      <label class="lbl-3" for="inlineCheckbox1"><b>I vilken stad spelades den senaste Champions League-finalen?</b></label>
-      <div class="input-7">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox7" value="option7">
-        <label>London</label>
-      </div>
+<section id="geografiQuiz"></section>
+<p  id="fraga">Hur många stater räknas tillhöra Europa?</p>
+<div id="svarsKnappar">
+  <div class="grid-7">
+    <button id="correctFraga7">44</button>
+    <button id="btn2">59</button>
+    <button id="btn3">36</button>
+    <button id="btn4">20</button>
+  </div>
+</div>
 
-      <div class="input-8">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox8" value="option8">
-        <label>Paris</label>
-      </div>
+<p  id="fraga">Vad heter Sveriges största sjö?</p>
+<div id="svarsKnappar">
+  <div class="grid-8">
+    <button id="btn1">Vättern</button>
+    <button id="btn2">Hjälmaren</button>
+    <button id="btn3">Mälaren</button>
+    <button id="correctFraga8">Vänern</button>
+  </div>
+</div>
 
-      <div class="input-9">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox9" value="kiev">
-        <label>Kiev</label>
-      </div>
+<p  id="fraga">Vilket land är störst till ytan?</p>
+<div id="svarsKnappar">
+  <div class="grid-9">
+    <button id="btn1">Kina</button>
+    <button id="correctFraga9">Ryssland</button>
+    <button id="btn3">Kanada</button>
+    <button id="btn4">USA</button>
+  </div>
+</div>
 
-      <label class="lbl-4" for="inlineCheckbox1"><b>När vann Liverpool Champions League senast?</b></label>
-      <div class="input-10">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox10" value="option10">
-        <label>1976</label>
-      </div>
+<p  id="fraga">.... och störst till befolkning?</p>
+<div id="svarsKnappar">
+  <div class="grid-10">
+    <button id="btn1">USA</button>
+    <button id="btn2">Indien</button>
+    <button id="correctFraga10">Kina</button>
+    <button id="btn4">Sydafrika</button>
+  </div>
+</div>
 
-      <div class="input-11">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox11" value="ar2005">
-        <label>2005</label>
-      </div>
 
-      <div class="input-12">
-        <input class="bullet-point" type="checkbox" id="inlineCheckbox12" value="option12">
-        <label>2012</label>
-      </div>
-    </section>
-    <section class="slut">
-    <button id="klar-knapp">Tryck för rättning</button>
-    <div><p id="antalratt"></p></div>
-    </section>
+<section>
+  <a href="#hem"><button id="BackToTop">TOP</button></a>
+</section>
 
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
-  </html>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="jquery-3.3.1.min.js"></script>
+      </body>
+      </html>
