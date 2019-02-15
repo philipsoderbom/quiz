@@ -13,26 +13,34 @@
 </head>
 <body id="body">
 <h1 id="hem">Quiz</h1>
+<div id="svarsKnappar" style="text-align: center"><button id="begin" style="display: inline-block">Starta Quiz</button></div>
+<div class="begin" id="beginQuiz">
 <div class="container">
+
   <div class="fadeOut">
-  <p id="fraga">Vem är detta?</p>
+  <p id="fraga">Vem är på bilden?</p>
   <div id="gissa"><img src="img/vem.jpg"></div>
+  <div class="tipsruta"><p id="tips"></p></div>
 
 
 <div id="svarsKnappar">
   <div class="grid">
-    <button id="btn1">Cristiano Ronaldo</button>
-    <button id="btn2">Zinedine Zidane</button>
-    <button id="btn3">Neymar</button>
-    <button id="correctFraga1">Vinicius Jr</button>
+    <a><button id="btn1">Ronaldo</button></a>
+    <a><button id="btn2">Zidane</button></a>
+    <a><button id="btn3">Neymar</button></a>
+    <a><button id="correctFraga1">Vinicius Jr</button></a>
   </div>
 </div>
 </div>
-
+<div class="hjälpguide">
+  <img src="img/arrow.png">
+</div>
 <div class="resultat" id="resultat">
   <button id="correct">Rätta Quiz!</button>
   <p id="antalRatt"></p>
 </div>
+
+
 
 </div>
 
@@ -40,7 +48,7 @@
   <p id="fraga">Vem vann utmärkelsen Ballon D'or år 2018?</p>
 <div id="svarsKnappar">
   <div class="grid-2">
-    <button id="btn1">Cristiano Ronaldo</button>
+    <button id="btn1">Ronaldo</button>
     <button id="correctFraga2">Modric</button>
     <button id="btn3">Neymar</button>
     <button id="btn4">Messi</button>
@@ -53,7 +61,7 @@
     <button id="btn1">Juventus</button>
     <button id="btn2">Barcelona</button>
     <button id="correctFraga3">Real Madrid</button>
-    <button id="btn4">Manchester City</button>
+    <button id="btn4">Man.City</button>
   </div>
 </div>
 
@@ -68,7 +76,7 @@
 
 
 
-<section id="carQuiz"></section>
+<section id="carQuiz"></section><br>
 
 <p id="fraga">Vilken av biltillverkarna är italiensk?</p>
 <div id="svarsKnappar">
@@ -78,7 +86,7 @@
     <button id="btn3">BMW</button>
     <button id="correctFraga5">Alfa Romeo</button>
   </div>
-</div>
+</div><br><br>
 
 <p id="fraga">Vilken av biltillverkarna är svensk?</p>
 <div id="svarsKnappar">
@@ -88,7 +96,7 @@
     <button id="btn3">Chevrolet</button>
     <button id="btn4">Maserati</button>
   </div>
-</div>
+</div><br><br>
 
 
 
@@ -101,7 +109,7 @@
     <button id="btn3">36</button>
     <button id="btn4">20</button>
   </div>
-</div>
+</div><br><br>
 
 <p  id="fraga">Vad heter Sveriges största sjö?</p>
 <div id="svarsKnappar">
@@ -111,7 +119,7 @@
     <button id="btn3">Mälaren</button>
     <button id="correctFraga8">Vänern</button>
   </div>
-</div>
+</div><br><br>
 
 <p  id="fraga">Vilket land är störst till ytan?</p>
 <div id="svarsKnappar">
@@ -121,7 +129,7 @@
     <button id="btn3">Kanada</button>
     <button id="btn4">USA</button>
   </div>
-</div>
+</div><br><br>
 
 <p  id="fraga">.... och störst till befolkning?</p>
 <div id="svarsKnappar">
@@ -131,12 +139,14 @@
     <button id="correctFraga10">Kina</button>
     <button id="btn4">Sydafrika</button>
   </div>
-</div>
+</div><br><br>
 
 
-<section>
+<section class="footer">
   <a href="#hem"><button id="BackToTop">TOP</button></a>
 </section>
+
+</div>
 
 
         <!-- Optional JavaScript -->
